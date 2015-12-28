@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+    <action>
+        <actionName>CUSTOM-Generate Site</actionName>
+        <displayName>Generate Site</displayName>
+        <goals>
+            <goal>clean</goal>
+            <goal>install</goal>
+            <goal>site</goal>
+        </goals>
+        <activatedProfiles>
+            <activatedProfile>release-profile</activatedProfile>
+        </activatedProfiles>
+    </action>
+    <action>
+        <actionName>CUSTOM-Update File Licenses</actionName>
+        <displayName>Update File Licenses</displayName>
+        <goals>
+            <goal>license:update-file-header</goal>
+        </goals>
+        <activatedProfiles>
+            <activatedProfile>release-profile</activatedProfile>
+        </activatedProfiles>
+    </action>
+    <action>
+        <actionName>CUSTOM-Fix JavaDoc</actionName>
+        <displayName>Fix JavaDoc</displayName>
+        <goals>
+            <goal>javadoc:fix</goal>
+            <goal>javadoc:test-fix</goal>
+        </goals>
+        <activatedProfiles>
+            <activatedProfile>release-profile</activatedProfile>
+        </activatedProfiles>
+    </action>
+</actions>
